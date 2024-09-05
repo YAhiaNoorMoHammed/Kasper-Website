@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ar" class="scroll-smooth">
+<head>
+    <!-- npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kasper</title>
+</head>
+<body class="font-open-sans">
+    <nav class="md:bg-transparent bg-gray-600 bg-opacity-50 text-white absolute top-0 left-0 w-full z-10">
+        <div class="container mx-auto px-4 md:relative md:before:absolute md:before:w-full md:before:h-px md:before:left-0 md:before:bottom-0 md:before:bg-white md:before:bg-opacity-40">
+          <div class="flex justify-between items-center py-4">
+            <a href="#" id="nav_logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <div class="hidden md:flex space-x-6">
+              <a href="#home" class="block capitalize text-cyan-400 p-1 relative before:absolute before:w-full before:h-px before:bg-cyan-400 before:-bottom-4 before:left-0">home</a>
+              <a href="#services" class="block capitalize text-white duration-700 hover:text-cyan-400 p-2 relative before:absolute before:w-0 before:h-px before:bg-cyan-400 before:-bottom-4 before:left-0 before:duration-700 hover:before:w-full">services</a>
+              <a href="#portfolio" class="block capitalize text-white duration-700 hover:text-cyan-400 p-2 relative before:absolute before:w-0 before:h-px before:bg-cyan-400 before:-bottom-4 before:left-0 before:duration-700 hover:before:w-full">portfolio</a>
+              <a href="#about" class="block capitalize text-white duration-700 hover:text-cyan-400 p-2 relative before:absolute before:w-0 before:h-px before:bg-cyan-400 before:-bottom-4 before:left-0 before:duration-700 hover:before:w-full">about</a>
+              <a href="#pricing" class="block capitalize text-white duration-700 hover:text-cyan-400 p-2 relative before:absolute before:w-0 before:h-px before:bg-cyan-400 before:-bottom-4 before:left-0 before:duration-700 hover:before:w-full">pricing</a>
+              <a href="#contact" class="block capitalize text-white duration-700 hover:text-cyan-400 p-2 relative before:absolute before:w-0 before:h-px before:bg-cyan-400 before:-bottom-4 before:left-0 before:duration-700 hover:before:w-full">contact</a>
+              <div id="nav_form" class="md:block hidden relative w-10 before:absolute before:w-px before:h-full before:top-0 before:left-0 before:bg-white">
+                <svg class="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>              </div>
+            </div>
+            <div class="md:hidden">
+              <button id="menu-btn">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#" class="block py-4 capitalize">home</a>
+            <a href="#" class="block py-4 capitalize">services</a>
+            <a href="#" class="block py-4 capitalize">portfolio</a>
+            <a href="#" class="block py-4 capitalize">about</a>
+            <a href="#" class="block py-4 capitalize">pricing</a>
+            <a href="#" class="block py-4 capitalize">contact</a>
+          </div>
+        </div>
+    </nav>      
+    <section id="landing" class="min-h-screen bg-no-repeat bg-cover relative bg-landing before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black before:bg-opacity-60">
+        <div id="landing_text_content" class="max-w-full bg-cyan-300 bg-opacity-30 absolute top-1/2 -translate-y-1/2 text-white left-0 md:px-20 md:py-16 p-10" style="width: 700px">
+            <h1 class="text-3xl capitalize mb-3">
+                hello world ! <br>
+                we are kasper we make art
+            </h1>
+            <p>
+                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+            </p>
+        </div>
+        <div id="arrow_left_landing" class="md:block hidden absolute top-1/2 -translate-y-1/2 left-3">
+            <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fff"><path d="M560.67-240 320-480.67l240.67-240.66L608-674 414.67-480.67 608-287.33 560.67-240Z"/></svg>
+        </div>
+        <div id="arrow_right_landing" class="md:block hidden absolute top-1/2 -translate-y-1/2 right-3">
+            <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fff"><path d="M521.33-480.67 328-674l47.33-47.33L616-480.67 375.33-240 328-287.33l193.33-193.34Z"/></svg>
+        </div>
+        <ul id="shuffled_landing" class="flex items-center justify-center gap-2 absolute bottom-5 left-1/2 -translate-x-1/2">
+            <li class="w-4 h-4 rounded-full border border-solid border-white bg-transparent cursor-pointer"></li>
+            <li class="w-4 h-4 rounded-full bg-cyan-400 cursor-pointer"></li>
+            <li class="w-4 h-4 rounded-full border border-solid border-white bg-transparent cursor-pointer"></li>
+        </ul>
+    </section>
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4">
+            <div id="services_head" class="text-center">
+                <h1 class="w-fit mx-auto mb-8 pb-8 sm:text-6xl text-5xl capitalize relative before:absolute before:w-52 before:h-0.5 before:bg-black before:bottom-0 before:left-1/2 before:-translate-x-1/2 after:absolute after:w-6 after:h-6 after:border-2 after:border-solid after:border-black after:bg-white after:rounded-full after:left-1/2 after:-translate-x-1/2 after:-bottom-3">services</h1>
+                <p class="max-w-full mx-auto text-lg text-gray-600 mb-16" style="width:550px">
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                </p>
+            </div>
+            <div id="services_content" class="flex justify-between flex-wrap">
+                <div id="services_box_one" class="flex md:flex-row flex-col md:items-start items-center lg:basis-[47%] basis-full">
+                    <i class="fas fa-desktop fa-3x md:mr-5 mb-5"></i>
+                    <div id="services_box_text_one" class="md:text-left text-center mb-12">
+                        <h2 class="text-cyan-400 text-2xl">Vorem amet intuitive</h2>
+                        <p class="text-gray-600 mt-3 leading-loose">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.
+                        </p>
+                    </div>
+                </div>
+                <div id="services_box_two" class="flex md:flex-row flex-col md:items-start items-center lg:basis-[47%] basis-full">
+                    <i class="fas fa-cog fa-3x md:mr-5 mb-5"></i>
+                    <div id="services_box_text_two" class="md:text-left text-center mb-12">
+                        <h2 class="text-cyan-400 text-2xl">Vorem amet intuitive</h2>
+                        <p class="text-gray-600 mt-3 leading-loose">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.
+                        </p>
+                    </div>
+                </div>
+                <div id="services_box_three" class="flex md:flex-row flex-col md:items-start items-center lg:basis-[47%] basis-full">
+                    <i class="fas fa-pencil-ruler fa-3x md:mr-5 mb-5"></i>
+                    <div id="services_box_text_three" class="md:text-left text-center mb-12">
+                        <h2 class="text-cyan-400 text-2xl">Vorem amet intuitive</h2>
+                        <p class="text-gray-600 mt-3 leading-loose">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.
+                        </p>
+                    </div>
+                </div>
+                <div id="services_box_four" class="flex md:flex-row flex-col md:items-start items-center lg:basis-[47%] basis-full">
+                    <i class="fas fa-camera fa-3x md:mr-5 mb-5"></i>
+                    <div id="services_box_text_four" class="md:text-left text-center mb-12">
+                        <h2 class="text-cyan-400 text-2xl">Vorem amet intuitive</h2>
+                        <p class="text-gray-600 mt-3 leading-loose">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="design" style="height:600px" class="py-20 bg-design bg-no-repeat bg-cover relative before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black before:bg-opacity-60 overflow-hidden">
+        <div id="design_content" class="relative flex items-center">
+            <div id="design_image" class="lg:flex hidden justify-center flex-1">
+                <img src="images/mobile.png" alt="mobile_image" class="relative -bottom-32">
+            </div>
+            <div id="design_cont_text" class="flex-1 bg-cyan-300 bg-opacity-30 px-12 p-16 text-white">
+                <h1 class="md:text-3xl uppercase text-2xl mb-6">our design comes with...</h1>
+                <ul id="shuffled_design">
+                    <li class="py-3 px-6 text-lg relative before:absolute before:content-['\f108'] before:font-[FONTAWESOME] before:text-sm before:top-1/2 before:-translate-y-1/2 before:left-0">Responsive Design</li>
+                    <li class="py-3 px-6 text-lg relative before:absolute before:content-['\f108'] before:font-[FONTAWESOME] before:text-sm before:top-1/2 before:-translate-y-1/2 before:left-0">Modern And Clean Design</li>
+                    <li class="py-3 px-6 text-lg relative before:absolute before:content-['\f108'] before:font-[FONTAWESOME] before:text-sm before:top-1/2 before:-translate-y-1/2 before:left-0">Clean Code</li>
+                    <li class="py-3 px-6 text-lg relative before:absolute before:content-['\f108'] before:font-[FONTAWESOME] before:text-sm before:top-1/2 before:-translate-y-1/2 before:left-0">Browser Friendly</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-4">
+            <div id="portfolio_head" class="text-center">
+                <h1 class="w-fit mx-auto mb-8 pb-8 sm:text-6xl text-5xl capitalize relative before:absolute before:w-52 before:h-0.5 before:bg-black before:bottom-0 before:left-1/2 before:-translate-x-1/2 after:absolute after:w-6 after:h-6 after:border-2 after:border-solid after:border-black after:bg-white after:rounded-full after:left-1/2 after:-translate-x-1/2 after:-bottom-3">portfolio</h1>
+                <p class="max-w-full mx-auto text-lg text-gray-600 mb-16" style="width:550px">
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                </p>
+            </div>
+            <ul id="shuffled_portfolio" class="flex items-center justify-center gap-4 mb-10">
+                <li data-filter="all" class="capitalize p-2 bg-cyan-400 text-white cursor-pointer">all</li>
+                <li data-filter="app" class="capitalize p-2 bg-transparent text-black cursor-pointer">app</li>
+                <li data-filter="photo" class="capitalize p-2 bg-transparent text-black cursor-pointer">photo</li>
+                <li data-filter="web" class="capitalize p-2 bg-transparent text-black cursor-pointer">web</li>
+                <li data-filter="print" class="capitalize p-2 bg-transparent text-black cursor-pointer">print</li>
+            </ul>
+        </div>
+        <div id="portfolio_content_all" class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-01.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-02.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-03.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-04.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-05.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-06.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-07.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-08.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio_content_app" class="hidden lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-01.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-02.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-03.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-04.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio_content_photo" class="hidden lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-05.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-06.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-07.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-08.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio_content_web" class="hidden md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-05.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-08.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-03.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio_content_print" class="hidden sm:grid-cols-2  grid-cols-1">
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-02.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+            <div class="box group relative cursor-pointer overflow-hidden hover:[&>img]:rotate-[1.06deg] hover:[&>img]:scale-[1.1]">
+                <img src="images/shuffle-06.jpg" alt="image" class="max-w-full transition-all duration-500">
+                <div class="caption w-full bg-white p-2 capitalize transition-all duration-500 absolute -bottom-full group-hover:bottom-0">
+                    <h3 class="text-lg">awesome image</h3>
+                    <p class="text-cyan-400">photography</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="text-white block bg-cyan-400 capitalize w-fit mx-auto mt-14 px-7 py-3 cursor-pointer">more</a>
+    </section>
+    <section id="video" class="relative before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black before:bg-opacity-60">
+        <video src="images/awesome-video.mp4" loop autoplay></video>
+        <div id="video_content" class="absolute top-1/2 -translate-y-1/2 left-0 w-full bg-cyan-300 bg-opacity-30 md:py-20 py-7 text-center">
+            <h1 class="text-white uppercase md:text-3xl text-2xl">super awesome video</h1>
+            <p class="text-white capitalize my-5">its all you need</p>
+            <button class="capitalize block bg-black w-fit text-white cursor-pointer mx-auto px-6 py-3">see more</button>
+        </div>
+    </section>
+    <section id="about" class="pt-20 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div id="about_head" class="text-center">
+                <h1 class="w-fit mx-auto mb-8 pb-8 sm:text-6xl text-5xl capitalize relative before:absolute before:w-52 before:h-0.5 before:bg-black before:bottom-0 before:left-1/2 before:-translate-x-1/2 after:absolute after:w-6 after:h-6 after:border-2 after:border-solid after:border-black after:bg-white after:rounded-full after:left-1/2 after:-translate-x-1/2 after:-bottom-3">about us</h1>
+                <p class="max-w-full mx-auto text-lg text-gray-600 mb-16" style="width:550px">
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                </p>
+            </div>
+            <div id="about_image" class="flex justify-center">
+                <img src="images/about.png" alt="image" class="relative sm:-bottom-28 -bottom-16 sm:-mt-28 -mt-16">
+            </div>
+        </div>
+    </section>
+    <section id="stats" class="py-20 bg-no-repeat bg-cover bg-stats relative before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black before:bg-opacity-60">
+        <div class="container mx-auto px-4 py-16 grid gap-8 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-cyan-300 bg-opacity-30 relative">
+            <div id="stats_card_one" class="text-center">
+                <span class="w-9 h-9 bg-black text-white mx-auto rounded-full flex items-center justify-center">
+                    <i class="fas fa-mug-hot"></i>
+                </span>
+                <strong class="text-white text-5xl block my-4">1.236</strong>
+                <span class="capitalize text-lg text-white">coffee drinks</span>
+            </div>
+            <div id="stats_card_two" class="text-center">
+                <span class="w-9 h-9 bg-black text-white mx-auto rounded-full flex items-center justify-center">
+                    <i class="far fa-folder"></i>
+                </span>
+                <strong class="text-white text-5xl block my-4">256</strong>
+                <span class="capitalize text-lg text-white">completed projects</span>
+            </div>
+            <div id="stats_card_three" class="text-center">
+                <span class="w-9 h-9 bg-black text-white mx-auto rounded-full flex items-center justify-center">
+                    <i class="far fa-envelope"></i>
+                </span>
+                <strong class="text-white text-5xl block my-4">1,734</strong>
+                <span class="capitalize text-lg text-white">mail sent</span>
+            </div>
+            <div id="stats_card_four" class="text-center">
+                <span class="w-9 h-9 bg-black text-white mx-auto rounded-full flex items-center justify-center">
+                    <i class="fas fa-trophy"></i>
+                </span>
+                <strong class="text-white text-5xl block my-4">17</strong>
+                <span class="capitalize text-lg text-white">awards reserved</span>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-4 grid lg:grid-cols-2 grid-cols-1 lg:gap-20 gap-10">
+            <div id="testimonial">
+                <div id="testimonial_head" class="text-center mb-10">
+                    <h3 class="uppercase mb-4 text-xl">testimonial</h3>
+                    <p class="text-gray-600 text-base">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt
+                    </p>
+                </div>
+                <div id="testimonial_rows" class="mb-14">
+                    <div id="testimonial_row_one" class="flex sm:flex-row flex-col items-center gap-4 mb-7">
+                        <img src="images/skills-01.jpg" alt="user" class="w-28 rounded-full">
+                        <p class="text-lg text-black relative sm:text-left text-center before:absolute before:w-full before:h-px before:bg-black before:bg-opacity-20 before:left-0 before:-bottom-5">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt. <br>
+                            <span class="block text-right text-gray-600 mt-4">John Doe, CEO</span>
+                        </p>
+                    </div>
+                    <div id="testimonial_row_two" class="flex sm:flex-row flex-col items-center gap-4 mb-7">
+                        <img src="images/skills-02.jpg" alt="user" class="w-28 rounded-full">
+                        <p class="text-lg text-black relative sm:text-left text-center before:absolute before:w-full before:h-px before:bg-black before:bg-opacity-20 before:left-0 before:-bottom-5">
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt. <br>
+                            <span class="block text-right text-gray-600 mt-4">John Doe, CEO</span>
+                        </p>
+                    </div>
+                </div>
+                <ul id="testimonial_shuffled" class="flex items-center justify-center gap-3">
+                    <li class="w-4 h-4 border border-solid border-black rounded-full cursor-pointer"></li>
+                    <li class="w-4 h-4 bg-cyan-400 rounded-full cursor-pointer"></li>
+                    <li class="w-4 h-4 border border-solid border-black rounded-full cursor-pointer"></li>
+                </ul>
+            </div>
+            <div id="skill">
+                <div id="skill_head" class="text-center mb-10">
+                    <h3 class="uppercase mb-4 text-xl">skills</h3>
+                    <p class="text-gray-600 text-base">
+                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt
+                    </p>
+                </div>
+                <div id="skill_progress">
+                    <div id="pro_one">
+                        <h2 class="uppercase text-black text-xl mb-4">adobe</h2>
+                        <div id="prog_block_one" class="bg-gray-400 bg-opacity-40 w-full h-8 mb-5">
+                            <span style="width:75%" class="block h-full bg-cyan-400 relative before:absolute before:block before:content-['75%'] before:w-fit before:bg-black before:text-white before:py-1 before:px-2 before:-right-5 before:-top-12 after:absolute  after:border-8 after:border-solid after:border-t-black after:border-l-transparent after:border-r-transparent after:border-b-transparent after:-right-2 after:-top-4"></span>
+                        </div>
+                    </div>
+                    <div id="pro_two">
+                        <h2 class="uppercase text-black text-xl mb-4">html & css</h2>
+                        <div id="prog_block_two" class="bg-gray-400 bg-opacity-40 w-full h-8 mb-5">
+                            <span style="width:90%" class="block h-full bg-cyan-400 relative before:absolute before:block before:content-['90%'] before:w-fit before:bg-black before:text-white before:py-1 before:px-2 before:-right-5 before:-top-12 after:absolute  after:border-8 after:border-solid after:border-t-black after:border-l-transparent after:border-r-transparent after:border-b-transparent after:-right-2 after:-top-4"></span>
+                        </div>
+                    </div>
+                    <div id="pro_three">
+                        <h2 class="uppercase text-black text-xl mb-4">javascript</h2>
+                        <div id="prog_block_three" class="bg-gray-400 bg-opacity-40 w-full h-8 mb-5">
+                            <span style="width:55%" class="block h-full bg-cyan-400 relative before:absolute before:block before:content-['55%'] before:w-fit before:bg-black before:text-white before:py-1 before:px-2 before:-right-5 before:-top-12 after:absolute  after:border-8 after:border-solid after:border-t-black after:border-l-transparent after:border-r-transparent after:border-b-transparent after:-right-2 after:-top-4"></span>
+                        </div>
+                    </div>
+                    <div id="pro_four">
+                        <h2 class="uppercase text-black text-xl mb-4">c++</h2>
+                        <div id="prog_block_four" class="bg-gray-400 bg-opacity-40 w-full h-8 mb-5">
+                            <span style="width:60%" class="block h-full bg-cyan-400 relative before:absolute before:block before:content-['60%'] before:w-fit before:bg-black before:text-white before:py-1 before:px-2 before:-right-5 before:-top-12 after:absolute  after:border-8 after:border-solid after:border-t-black after:border-l-transparent after:border-r-transparent after:border-b-transparent after:-right-2 after:-top-4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="quote" class="py-20 bg-quote bg-no-repeat bg-cover relative before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black before:bg-opacity-60">
+        <div class="container mx-auto px-4 text-center text-white relative">
+            <q class="text-2xl md:text-3xl lg:text-4xl">
+                accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+            </q>
+            <p class="text-lg mt-6">
+                John Doe
+            </p>
+        </div>
+    </section>
+    <section id="pricing" class="py-20">
+        <div class="container mx-auto px-4">
+            <div id="pricing_head" class="text-center">
+                <h1 class="w-fit mx-auto mb-8 pb-8 sm:text-6xl text-5xl capitalize relative before:absolute before:w-52 before:h-0.5 before:bg-black before:bottom-0 before:left-1/2 before:-translate-x-1/2 after:absolute after:w-6 after:h-6 after:border-2 after:border-solid after:border-black after:bg-white after:rounded-full after:left-1/2 after:-translate-x-1/2 after:-bottom-3">pricing</h1>
+                <p class="max-w-full mx-auto text-lg text-gray-600 mb-16" style="width:550px">
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                </p>
+            </div>
+            <div id="pricing_content" class="grid gap-10 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+                <div id="pricing_box_one">
+                    <div id="up_box_one" class="text-center pt-8 mt-8 relative before:absolute before:w-full before:h-px before:top-0 before:left-0 before:bg-cyan-400">
+                        <h3 class="uppercase text-xl mb-6">basic</h3>
+                        <strong class="mx-auto w-fit relative text-5xl before:absolute before:content-['$'] before:text-2xl before:-left-5 before:-top-1 after:absolute after:content-['/mon'] after:capitalize after:text-base after:-bottom-1">19</strong>
+                    </div>
+                    <ul class="py-8 my-8 relative text-center before:absolute before:w-full before:h-px before:bg-cyan-400 before:top-0 before:left-0 after:absolute after:w-full after:h-px after:bottom-0 after:left-0 after:bg-cyan-400">
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Feature No 1</li>
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Extra Feature</li>
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Extra Feature No 2</li>
+                        <li class="text-base">Feature</li>
+                    </ul>
+                    <a href="#" class="block mt-10 mx-auto px-6 py-3 capitalize border border-solid border-cyan-400 text-base w-fit text-cyan-600">buy now</a>
+                </div>
+                <div id="pricing_box_two">
+                    <div id="up_box_two" class="text-center pt-8 mt-8 relative before:absolute before:w-full before:h-px before:top-0 before:left-0 before:bg-cyan-400">
+                        <h3 class="uppercase text-xl mb-6">premium</h3>
+                        <strong class="mx-auto w-fit relative text-5xl before:absolute before:content-['$'] before:text-2xl before:-left-5 before:-top-1 after:absolute after:content-['/mon'] after:capitalize after:text-base after:-bottom-1">29</strong>
+                    </div>
+                    <ul class="py-8 my-8 relative text-center before:absolute before:w-full before:h-px before:bg-cyan-400 before:top-0 before:left-0 after:absolute after:w-full after:h-px after:bottom-0 after:left-0 after:bg-cyan-400">
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Feature No 1</li>
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Extra Feature</li>
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Extra Feature No 2</li>
+                        <li class="text-base">Feature</li>
+                    </ul>
+                    <a href="#" class="block mt-10 mx-auto px-6 py-3 capitalize border border-solid border-cyan-400 text-base w-fit text-cyan-600">buy now</a>
+                </div>
+                <div id="pricing_box_three">
+                    <div id="up_box_three" class="text-center pt-8 mt-8 relative before:absolute before:w-full before:h-px before:top-0 before:left-0 before:bg-cyan-400">
+                        <h3 class="uppercase text-xl mb-6">pro</h3>
+                        <strong class="mx-auto w-fit relative text-5xl before:absolute before:content-['$'] before:text-2xl before:-left-5 before:-top-1 after:absolute after:content-['/mon'] after:capitalize after:text-base after:-bottom-1">39</strong>
+                    </div>
+                    <ul class="py-8 my-8 relative text-center before:absolute before:w-full before:h-px before:bg-cyan-400 before:top-0 before:left-0 after:absolute after:w-full after:h-px after:bottom-0 after:left-0 after:bg-cyan-400">
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Feature No 1</li>
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Extra Feature</li>
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Extra Feature No 2</li>
+                        <li class="text-base">Feature</li>
+                    </ul>
+                    <a href="#" class="block mt-10 mx-auto px-6 py-3 capitalize border border-solid border-cyan-400 text-base w-fit text-cyan-600">buy now</a>
+                </div>
+                <div id="pricing_box_four">
+                    <div id="up_box_four" class="text-center pt-8 mt-8 relative before:absolute before:w-full before:h-px before:top-0 before:left-0 before:bg-cyan-400">
+                        <h3 class="uppercase text-xl mb-6">platinum</h3>
+                        <strong class="mx-auto w-fit relative text-5xl before:absolute before:content-['$'] before:text-2xl before:-left-5 before:-top-1 after:absolute after:content-['/mon'] after:capitalize after:text-base after:-bottom-1">49</strong>
+                    </div>
+                    <ul class="py-8 my-8 relative text-center before:absolute before:w-full before:h-px before:bg-cyan-400 before:top-0 before:left-0 after:absolute after:w-full after:h-px after:bottom-0 after:left-0 after:bg-cyan-400">
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Feature No 1</li>
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Extra Feature</li>
+                        <li class="pb-3 mb-3 text-base relative before:absolute before:w-40 before:h-px before:bg-cyan-400 before:bottom-0 before:left-1/2 before:-translate-x-1/2">Extra Feature No 2</li>
+                        <li class="text-base">Feature</li>
+                    </ul>
+                    <a href="#" class="block mt-10 mx-auto px-6 py-3 capitalize border border-solid border-cyan-400 text-base w-fit text-cyan-600">buy now</a>
+                </div>
+            </div>
+            <h1 class="text-center mt-24 mb-6 capitalize text-xl">contact us if you have special request</h1>
+            <a href="#" class="capitalize mx-auto block text-lg w-fit bg-cyan-400 text-white px-6 py-3">contact us</a>
+        </div>
+    </section>
+    <section id="subscribe" class="py-20 bg-sub bg-no-repeat bg-cover relative before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-black before:bg-opacity-60">
+        <div class="container mx-auto px-4 relative flex lg:flex-row lg:gap-28 flex-col gap-10">
+            <form action="#" class="lg:basis-[46%] basis-full flex items-center">
+                <input type="email" placeholder="your email" class="bg-transparent basis-[60%] border border-solid border-t-white border-l-white border-b-white border-r-transparent p-3 outline-none text-white placeholder:capitalize">
+                <input type="submit" value="subscribe" class="basis-[40%] bg-cyan-400 text-white border border-solid border-t-white border-l-transparent border-r-white border-b-white capitalize py-3 cursor-pointer">
+            </form>
+            <div id="subscribe_text" class="lg:basis-[46%] basis-full text-white lg:text-left text-center">
+                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan dit aliquet elit, eget tincidunt.
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <div id="contact_head" class="text-center">
+                <h1 class="w-fit mx-auto mb-8 pb-8 sm:text-6xl text-5xl capitalize relative before:absolute before:w-52 before:h-0.5 before:bg-black before:bottom-0 before:left-1/2 before:-translate-x-1/2 after:absolute after:w-6 after:h-6 after:border-2 after:border-solid after:border-black after:bg-white after:rounded-full after:left-1/2 after:-translate-x-1/2 after:-bottom-3">contact us</h1>
+                <p class="max-w-full mx-auto text-lg text-gray-600 mb-16" style="width:550px">
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                </p>
+            </div>
+            <div id="contact_content" class="flex md:flex-row flex-col md:gap-48 gap-20">
+                <form action="#" class="md:basis-[60%] basis-full flex-col">
+                    <input type="text" placeholder="your name" class="w-full outline-none p-3 border border-solid border-gray-600 border-opacity-40 mb-7 placeholder:capitalize">
+                    <input type="email" placeholder="your email" class="w-full outline-none p-3 border border-solid border-gray-600 border-opacity-40 mb-7 placeholder:capitalize">
+                    <textarea placeholder="your message" class="w-full outline-none p-3 border border-solid border-gray-600 h-32 border-opacity-40 mb-7 placeholder:capitalize"></textarea>
+                    <input type="submit" value="send message" class="block ml-auto mr-0 bg-cyan-400 text-white capitalize py-3 px-6 cursor-pointer">
+                </form>
+                <div id="contact_information" class="md:basis-[30%] basis-full md:text-left text-center md:order-1 -order-1">
+                    <h2 class="capitalize text-xl mb-2">get in touch</h2>
+                    <p class="text-gray-600 mb-5">
+                        +00 123.456.789 <br>
+                        +00 123.456.789
+                    </p>
+                    <h2 class="capitalize text-xl mb-2 md:mt-20">where we are</h2>
+                    <address class="text-gray-600">
+                        Awesome Address 17 <br>
+                        New York, NYC <br>
+                        123-4567-890 <br>
+                        USA
+                    </address>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="foot" class="bg-sub bg-no-repeat bg-cover pt-20 pb-10 relative before:absolute before:w-full before:h-full before:left-0 before:top-0 before:bg-black before:bg-opacity-60">
+        <div class="container mx-auto px-4 relative">
+            <div id="image_footer" class="flex justify-center">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <h2 class="text-white text-2xl text-center my-10 capitalize">our social media</h2>
+            <ul class="flex items-center justify-center gap-5">
+                <li><a href="#"><i class="fab fa-facebook text-lg text-white duration-700 hover:text-cyan-400"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter text-lg text-white duration-700 hover:text-cyan-400"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin text-lg text-white duration-700 hover:text-cyan-400"></i></a></li>
+                <li><a href="#"><i class="fab fa-whatsapp text-lg text-white duration-700 hover:text-cyan-400"></i></a></li>
+            </ul>
+            <label class="text-white text-lg capitalize text-center block mt-7">this template is made by <span class="text-cyan-400">yahia noor</span></label>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
